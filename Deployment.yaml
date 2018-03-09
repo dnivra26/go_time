@@ -1,0 +1,21 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: time-deployment
+  labels:
+    app: time
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: time
+  template:
+    metadata:
+      labels:
+        app: time
+    spec:
+      containers:
+      - name: time
+        image: gcr.io/cattolica-poc/go-time:v1
+        ports:
+        - containerPort: 9091
