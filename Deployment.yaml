@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: time
-        image: gcr.io/cattolica-poc/go-time:v1
+        image: gcr.io/cattolica-poc/go-time:v2
         ports:
         - containerPort: 9091
